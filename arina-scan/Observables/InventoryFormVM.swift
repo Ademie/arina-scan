@@ -73,7 +73,7 @@ class InventoryFormViewModel: ObservableObject {
         item.thumbnailLink = thumbnailURL?.absoluteString
         
         do {
-            try db.document("items/\(item.id)").setData(from: item, merge: true)
+            try db.document("products/\(item.id)").setData(from: item, merge: true)
         } catch {
             self.error = error.localizedDescription
             throw error

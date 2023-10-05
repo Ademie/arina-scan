@@ -9,6 +9,8 @@ import SwiftUI
 
 struct InventoryListView: View {
   @StateObject var vm = InventoryListViewModel()
+  @State var formType: FormType?
+
   var body: some View {
     List {
       ForEach(vm.items) { item in
@@ -17,14 +19,29 @@ struct InventoryListView: View {
           .listRowSeparator(.hidden)
           .contentShape(Rectangle())  //Keep the content boxed in
           .onTapGesture {
-
+            formType = .edit(item)
           }
       }
     }
     .navigationTitle("Arina")
+    .toolbar {
+      ToolbarItem(placement: .primaryAction) {
+        Button("+ Item") {
+          formType = .add
+        }
+      }
+    }
+    .sheet(item: $formType) { type in
+      NavigationStack {
+        InventoryFormView(vm: .init(formType: type))
+      }
+      .presentationDetents([.fraction(0.9)])
+      .interactiveDismissDisabled()
+    }
     .onAppear {
       vm.listenToItems()
     }
+
   }
 }
 
@@ -34,7 +51,7 @@ struct InventoryListItemView: View {
     HStack(alignment: .top, spacing: 16) {
       ZStack {
         RoundedRectangle(cornerRadius: 8.0)
-          .foregroundColor(Color.purple.opacity(0.2))
+          .foregroundColor(Color.blue.opacity(0.1))
 
         if let thumbnailURL = item.thumbnailURL {
           AsyncImage(url: thumbnailURL) { phase in
@@ -47,14 +64,13 @@ struct InventoryListItemView: View {
           }
         }
       }
-      .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.purple.opacity(0.2), lineWidth: 2))
+      .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.blue.opacity(0.2), lineWidth: 2))
       .frame(width: 150, height: 150)
-
+      
       VStack(alignment: .leading) {
         Text(item.name).font(.headline)
         Text("Quantity: \(item.quantity)").font(.subheadline)
       }
-
     }
   }
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FEBF9B282ACE0B3700EE252D /* arina_scanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBF9B272ACE0B3700EE252D /* arina_scanApp.swift */; };
-		FEBF9B2A2ACE0B3700EE252D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBF9B292ACE0B3700EE252D /* ContentView.swift */; };
 		FEBF9B2C2ACE0B3C00EE252D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEBF9B2B2ACE0B3C00EE252D /* Assets.xcassets */; };
 		FEBF9B2F2ACE0B3C00EE252D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEBF9B2E2ACE0B3C00EE252D /* Preview Assets.xcassets */; };
 		FEBF9B4F2ACE12F900EE252D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FEBF9B4E2ACE12F900EE252D /* FirebaseFirestore */; };
@@ -27,7 +26,6 @@
 /* Begin PBXFileReference section */
 		FEBF9B242ACE0B3700EE252D /* arina-scan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "arina-scan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEBF9B272ACE0B3700EE252D /* arina_scanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arina_scanApp.swift; sourceTree = "<group>"; };
-		FEBF9B292ACE0B3700EE252D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FEBF9B2B2ACE0B3C00EE252D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEBF9B2E2ACE0B3C00EE252D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FEBF9B6C2ACE94B500EE252D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 				FEBF9B7F2ACEFFE300EE252D /* Models */,
 				FEBF9B822ACEFFE300EE252D /* String+Extension.swift */,
 				FEBF9B6C2ACE94B500EE252D /* GoogleService-Info.plist */,
-				FEBF9B292ACE0B3700EE252D /* ContentView.swift */,
 				FEBF9B2B2ACE0B3C00EE252D /* Assets.xcassets */,
 				FEBF9B2D2ACE0B3C00EE252D /* Preview Content */,
 			);
@@ -207,7 +204,6 @@
 				FEBF9B872ACEFFE300EE252D /* String+Extension.swift in Sources */,
 				FEBF9B852ACEFFE300EE252D /* InventoryItem.swift in Sources */,
 				FEEE0D012ACF149C008E2EFA /* InventoryFormVM.swift in Sources */,
-				FEBF9B2A2ACE0B3700EE252D /* ContentView.swift in Sources */,
 				FEBF9B282ACE0B3700EE252D /* arina_scanApp.swift in Sources */,
 				FEEE0D002ACF149C008E2EFA /* InventoryListVM.swift in Sources */,
 				FEBF9B7C2ACEC87C00EE252D /* InventoryListView.swift in Sources */,
